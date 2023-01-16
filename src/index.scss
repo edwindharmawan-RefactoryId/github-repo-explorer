@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.onboard-container {
+  @apply flex flex-wrap min-w-full min-h-screen bg-[url('https://wallpaperaccess.com/full/3414987.jpg')] bg-[#1E1E1E] bg-contain bg-no-repeat bg-center px-10 items-center justify-center flex-col gap-4;
+};
+
+.home-container {
+  @apply flex flex-wrap min-w-full min-h-screen bg-[url('https://wallpaperaccess.com/full/3414987.jpg')] bg-[#1E1E1E] bg-contain bg-no-repeat bg-center px-10 items-center justify-between md:justify-center sm:justify-center max-sm:justify-center;
+};
+
+.search-container {
+  @apply h-screen flex justify-center items-center w-[400px] min-w-[50vw] p-5;
+
+  .search-section {
+    @apply w-full max-w-sm h-full flex justify-start flex-col p-5 gap-y-5 bg-white rounded shadow-lg shadow-slate-50;
+  }
+
+  .search-form {
+    @apply flex flex-col gap-5;
+  }
+
+  .search-input {
+    @apply p-2 border-2 border-[#E6E6E6] bg-[#F2F2F2];
+  }
+
+  .btn-search {
+    @apply bg-[#2C9CDB] text-[#EBEFF1] py-4 hover:bg-[#3fb1f3];
+  }
+};
+
+.card {
+  @apply flex flex-col gap-2 mb-2;
+
+  .username-card {
+    @apply bg-[#F2F2F2] p-2 flex justify-between cursor-pointer hover:bg-[#dad8d8];
+  }
+
+  .card-repo {
+    @apply flex justify-between p-2 ml-5 bg-[#E0E0E0] cursor-pointer hover:bg-[#c2c2c2];
+
+    .name-description {
+      @apply flex flex-col;
+    }
+  }
+};
+
+.onboarding-input {
+  @apply p-2 border-2 border-[#E6E6E6] bg-[#F2F2F2] min-w-[40vw];
+}
+
+.text-error {
+  @apply text-sm text-red-400;
+};
+
+
+.loader-small {
+  border: 2px solid #f3f3f3; /* Light grey */
+  border-top: 2px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  animation: spin 1s linear infinite;
+}
+
+.loader-large {
+  border: 2px solid #f3f3f3; /* Light grey */
+  border-top: 2px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
