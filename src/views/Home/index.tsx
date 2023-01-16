@@ -1,3 +1,5 @@
+import { useEffect } from "react"
+
 import useHome from "./useHome"
 import Card from "../../components/CardDropdown"
 
@@ -20,6 +22,12 @@ const Home = () => {
       setSearchName,
     }
   } = useHome()
+
+  useEffect(() => {
+    return () => {
+      sessionStorage.removeItem('isLoggedIn')
+    }
+  }, [])
   
   return (
     <div className="home-container">
