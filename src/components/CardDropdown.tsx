@@ -29,7 +29,7 @@ const Card = (props: ICard) => {
 
       {/* CARD REPOS*/}
       {isLoadingRepos && cardActive == id ? 
-        <div className="w-full flex justify-center">
+        <div className="loader-wrapper">
           <span className="loader-small"/>
         </div> :
         cardActive == id && (
@@ -40,7 +40,7 @@ const Card = (props: ICard) => {
                   <span className="font-bold">{repo.name}</span>
                   <span>{repo.description}</span>
                 </div>
-                <div className="flex items-center gap-1 h-6">
+                <div className="star-wrapper">
                   <span className="h-6 font-bold">{repo.stargazers_count}</span>
                   <i className="fi fi-ss-star flex items-center"></i>
                 </div>

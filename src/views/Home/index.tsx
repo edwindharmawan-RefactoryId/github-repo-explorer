@@ -23,9 +23,9 @@ const Home = () => {
   
   return (
     <div className="home-container">
-      <div className="flex flex-col max-w-[20vw] min-w-[360px]">
-        <span className="text-4xl h-full p-5 font-bold text-white">HALO {name}</span>
-        <span className="h-full p-5 text-white flex flex-wrap">Welcome, this is our website to search any repositories</span>
+      <div className="welcome-container">
+        <span className="text-halo">HALO {name}</span>
+        <span className="text-welcome">Welcome, this is our website to search any repositories</span>
       </div>
 
       <div className="search-container">
@@ -46,7 +46,7 @@ const Home = () => {
           }
 
           {isLoading ?
-            <div className="flex-1 flex justify-center items-center">
+            <div className="loader-wrapper">
               <span className="loader-large" />
             </div> :
             <div className="overflow-auto">

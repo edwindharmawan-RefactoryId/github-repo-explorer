@@ -13,8 +13,8 @@ const OnBoarding = () => {
 
   return (
     <div className="onboard-container">
-      <h1 className="text-white text-5xl">HAI! ...</h1>
-      <div className="flex flex-col justify-center text-center">
+      <h1 className="text-hai">HAI! ...</h1>
+      <div className="welcome-text">
         <span className="text-white">Welcome to Github Repositories Explorer</span>
         <span className="text-white">You can search any github repositories in here.</span>
         <span className="text-white">Please input your name to continue.</span>
