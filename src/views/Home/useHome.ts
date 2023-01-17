@@ -38,7 +38,8 @@ const useHome = () => {
         method: 'GET',
         url: `${import.meta.env.VITE_BASE_URL}/search/users`,
         params: {
-          q: name
+          q: name,
+          per_page: 5,
         },
         headers: { Authorization: import.meta.env.VITE_TOKEN },
       })
