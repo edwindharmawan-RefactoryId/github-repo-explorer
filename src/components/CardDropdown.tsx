@@ -28,11 +28,13 @@ const Card = (props: ICard) => {
       </div>
 
       {/* CARD REPOS*/}
-      {isLoadingRepos && cardActive == id ? 
+      {isLoadingRepos && cardActive == id ?
         <div className="loader-wrapper">
           <span className="loader-small"/>
         </div> :
         cardActive == id && (
+          !userRepos.length ?
+          <span className="text-right text-xs">The user do not have any repositories.</span> :
           userRepos.map((repo, idx) => {
             return (
               <div className="card-repo" onClick={() => window.open(repo.html_url, 'blank')} key={idx}>
